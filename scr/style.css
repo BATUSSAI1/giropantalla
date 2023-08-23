@@ -1,0 +1,100 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+    height: 5px;
+} 
+
+html::-webkit-scrollbar-track {
+    background-color: blue;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: yellow;
+    border-radius: 1rem;
+}
+
+body{
+    background-color: lightgray;
+}
+
+.container{
+    background-color: blue;
+    width: 100vw ;
+    height: 100vh;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    padding: 50px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+}
+
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+/* .circle-btn{
+    position:fixed;
+    top: -100px;
+    left: -100px;
+} */
+
+.corner{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.5s linear;
+    top: -100px;
+    left: -100px;
+}
+
+.container.show-nav .corner {
+    transform: rotate(-70deg);
+} 
+
+#closed{
+    position:absolute;
+    bottom: 30px;
+    left: 40px;
+    font-size: 30px;
+    background: transparent;
+    border: 0;
+    color: white;
+}
+
+#open{
+    position:absolute;
+    bottom: 40px;
+    right: 25px;
+    font-size: 30px;
+    background: transparent;
+    border: 0;
+    color:white;
+}
+
+
+
+.set{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 40px;
+    padding: 10px;
+    
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
